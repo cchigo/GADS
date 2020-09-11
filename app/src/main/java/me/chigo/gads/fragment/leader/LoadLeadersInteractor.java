@@ -38,18 +38,7 @@ public class LoadLeadersInteractor {
 
     public DisposableObserver <List<HoursResponseData>> transactionHistoryObservable(final Context context){
         return new DisposableObserver<List<HoursResponseData>>() {
-//            @Override
-//            public void onNext(HoursResponseData hoursResponseModel) {
-//
-//            //    Log.d(TRANS_HISTORY, "DATA" + hoursResponseModel.getData());
-////                if(hoursResponseModel == null){
-////                    leadersListener.onFailure( "Error loading Leaders, Please try again");
-////                }else{
-//                    leadersListener.onSuccess(context,hoursResponseModel);
-//               // }
-//
-//            }
-
+            
             @Override
             public void onNext(List<HoursResponseData> hoursResponseData) {
                 leadersListener.onSuccess(context, hoursResponseData);
