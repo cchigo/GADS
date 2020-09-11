@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tabIndicatorAnimationDuration="6000"
+        app:tabIndicatorAnimationDuration="5000"
         app:tabIndicatorColor="#ffffff"
 
         app:tabIndicatorHeight="6dp"

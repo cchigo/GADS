@@ -6,11 +6,16 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import me.chigo.gads.utils.AppNavigator;
+
 public class MainActivity extends AppCompatActivity {
+    TextView submitTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +51,14 @@ public class MainActivity extends AppCompatActivity {
         );
         tabLayoutMediator.attach();
 
-
-
+//
+//        submitTV.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                new AppNavigator(MainActivity.this).navigateToSubmit();
+//            }
+//        });
     }
+
+
 }

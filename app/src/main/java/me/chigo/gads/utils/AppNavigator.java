@@ -19,4 +19,11 @@ public class AppNavigator {
         activity.overridePendingTransition(0,0);
         activity.startActivity(intent);
     }
+
+    public void navigateToSubmit() {
+        Intent intent = new Intent(activity, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        activity.overridePendingTransition(0,0);
+        activity.startActivity(intent);
+    }
 }

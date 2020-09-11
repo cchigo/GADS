@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".submission.SubmitActivity">
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/launcher"
+        app:layout_constraintBottom_toTopOf="@+id/tabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/include" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabIndicatorAnimationDuration="6000"
+        app:layout_constraintTop_toBottomOf="@id/imageView3"
+        app:tabIndicatorColor="#ffffff"
+        app:tabIndicatorHeight="6dp"
+        app:tabMode="fixed"
+        app:tabPaddingTop="15dp"
+        app:tabSelectedTextColor="#FFFFFF"
+        app:tabTextAppearance="@style/MyCustomTabText"
+        app:tabTextColor="#636363"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project Submission"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tabs"
+        app:layout_constraintEnd_toEndOf="@+id/tabs"
+        app:layout_constraintStart_toStartOf="@+id/tabs"
+        app:layout_constraintTop_toTopOf="@+id/tabs" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
