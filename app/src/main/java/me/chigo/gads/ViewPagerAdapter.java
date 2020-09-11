@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import me.chigo.gads.fragment.leader.FragmentLeader;
-import me.chigo.gads.fragment.skills.FragmentTwo;
+import me.chigo.gads.fragment.skills.FragmentSkills;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
 
@@ -22,7 +22,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
             case 0:
                 return new FragmentLeader();
             case 1:
-                return new FragmentTwo();
+                return new FragmentSkills();
             default:
                 return new FragmentLeader();
         }

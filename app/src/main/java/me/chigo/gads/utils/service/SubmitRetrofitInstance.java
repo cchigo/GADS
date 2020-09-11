@@ -11,10 +11,10 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RetrofitInstance {
+public class SubmitRetrofitInstance {
     private static Retrofit retrofit;
 
-    public void RetrofitInstance(){
+    public void SubmitRetrofitInstance(){
 
     }
 
@@ -34,7 +34,7 @@ public class RetrofitInstance {
             OkHttpClient okHttpClient = builder.build();
 
             retrofit = new retrofit2.Retrofit.Builder()
-                    .baseUrl(UrlConstants.BASE_URL)
+                    .baseUrl(UrlConstants.SUBMISSION_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .client(okHttpClient)

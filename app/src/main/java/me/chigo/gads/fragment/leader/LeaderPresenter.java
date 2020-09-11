@@ -9,11 +9,11 @@ import me.chigo.gads.model.hours.HoursResponseData;
 public class  LeaderPresenter implements LeaderContract.LeadersListener {
 
     private LeaderContract.LeaderView leaderView;
-    private LoadLeadersInteractor transactionHistoryInteractor;
+    private LoadLeadersInteractor loadLeadersInteractor;
 
     public LeaderPresenter(LeaderContract.LeaderView leaderView){
         this.leaderView = leaderView;
-        transactionHistoryInteractor = new LoadLeadersInteractor(this);
+        loadLeadersInteractor = new LoadLeadersInteractor(this);
     }
     @Override
     public void onSuccess(Context context, List<HoursResponseData> hoursResponseModel) {
@@ -36,6 +36,6 @@ public class  LeaderPresenter implements LeaderContract.LeadersListener {
     public void getHourLeaders(Context context){
 
         leaderView.showProgress();
-        transactionHistoryInteractor.transactionHistory(context);
+        loadLeadersInteractor.transactionHistory(context);
     }
 }

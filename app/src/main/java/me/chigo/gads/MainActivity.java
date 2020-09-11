@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
         }
         );
         tabLayoutMediator.attach();
+submitTV = findViewById(R.id.submit);
 
-//
-//        submitTV.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                new AppNavigator(MainActivity.this).navigateToSubmit();
-//            }
-//        });
+        submitTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AppNavigator(MainActivity.this).navigateToSubmit();
+            }
+        });
     }
 
 

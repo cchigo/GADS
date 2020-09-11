@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import me.chigo.gads.R;
 
 
-public class FragmentTwo extends Fragment {
+public class FragmentSkills extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
