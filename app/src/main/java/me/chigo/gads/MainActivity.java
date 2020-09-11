@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
@@ -24,13 +25,18 @@ public class MainActivity extends AppCompatActivity {
                 tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+
+              //  tabLayout.setTabTextColors(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                 switch (position){
                     case 0: {
-                        tab.setText("ONEEE");
+                        tab.setText("Learning Leaders");
+
+                        //tab.setText((CharSequence) ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+
                         break;
                     }
                     case 1: {
-                        tab.setText("TWOOO");
+                        tab.setText("Skill IQ Leaders");
                         break;
                     }
 
