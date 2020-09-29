@@ -28,8 +28,9 @@ public class SubmitInteractor {
 
     public void submit(Context context, String firstName, String lastName, String emailAdd, String githubLink) {
 
-        transactionHistoryObserver().subscribeWith(transactionHistoryObservable(firstName, lastName, emailAdd, githubLink));
+        transactionHistoryObserver(firstName, lastName, emailAdd, githubLink).subscribeWith(transactionHistoryObservable(context));
     }
+
 
 
     public Observable transactionHistoryObserver(String firstName, String lastName, String emailAdd, String githubLink) {
@@ -44,7 +45,7 @@ public class SubmitInteractor {
         return new DisposableObserver() {
 
             @Override
-            public void onNext() {
+            public void onNext(Object o) {
                 submitListener.onSuccess(context);
             }
 

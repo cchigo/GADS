@@ -36,6 +36,6 @@ public class SubmitPresenter implements SubmitContract.SubmitListener {
     public void submitReq(Context context, String firstName, String lastName, String emailAdd, String githubLink){
 
         submitView.showProgress();
-        submitInteractor.submit(context);
+        submitInteractor.submit(context, firstName, lastName, emailAdd, githubLink);
     }
 }
