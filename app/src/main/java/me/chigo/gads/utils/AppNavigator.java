@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 
 import me.chigo.gads.MainActivity;
+import me.chigo.gads.submission.SubmitActivity;
 
 public class AppNavigator {
 
@@ -21,7 +22,7 @@ public class AppNavigator {
     }
 
     public void navigateToSubmit() {
-        Intent intent = new Intent(activity, MainActivity.class);
+        Intent intent = new Intent(activity, SubmitActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         activity.overridePendingTransition(0,0);
         activity.startActivity(intent);
